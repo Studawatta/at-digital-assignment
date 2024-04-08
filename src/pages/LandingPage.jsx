@@ -4,6 +4,7 @@ import HeroImage from '../assets/HeroImage.png';
 import Button from '../components/Button';
 import image2 from '../assets/image2.png';
 import image1 from '../assets/image1.png';
+import Faqs from '../components/Faqs';
 
 const LandingPage = () => {
   return (
@@ -75,6 +76,34 @@ const LandingPage = () => {
             efficient model for your business.
           </p>
           <Button text="learn more" />
+        </div>
+      </div>
+
+      {/* FAQs */}
+      <div className="absolute left-5 top-[1915px] flex w-[334px] flex-col items-center gap-7 p-0 md:left-[42px] md:top-[1514px] md:w-[686px] lg:left-[152px] lg:top-[1711px] lg:w-[896px] xl:left-[297px] xl:top-[1847px] xl:w-fit">
+        <h1 className=" text-center font-['Poppins'] text-[27px] font-semibold leading-[33px] tracking-[0.4px] text-[#6B3CC9] md:text-left">
+          Frequently asked questions
+        </h1>
+        <div className="flex w-full flex-col items-start gap-4">
+          {/* QUESTIONS */}
+          <div className="flex w-full flex-col items-start gap-3 rounded-[7px] bg-[#FAF8FF] p-6 xl:w-[846px]">
+            <Faqs
+              question="Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?"
+              answer="Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer."
+            />
+          </div>
+          <div className="flex w-full flex-col items-start gap-3 rounded-[7px] bg-[#FAF8FF] p-6 xl:w-[846px]">
+            <Faqs
+              question="Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?"
+              answer="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+            />
+          </div>
+          <div className="flex w-full flex-col items-start gap-3 rounded-[7px] bg-[#FAF8FF] p-6 xl:w-[846px]">
+            <Faqs
+              question="Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?"
+              answer="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+            />
+          </div>
         </div>
       </div>
 
