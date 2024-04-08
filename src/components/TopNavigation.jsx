@@ -7,7 +7,7 @@ const TopNavigation = () => {
   const navButtonStyle =
     "text-white font-['Inter'] uppercase font-medium text-[14px] leading-[17px] cursor-pointer";
   return (
-    <div className="fixed flex w-full justify-between bg-[#6B3CC9] px-5 py-[26px] sm:px-10 md:px-[60px] xl:px-20">
+    <div className="absolute left-0 top-0 flex h-[77px] w-full items-center justify-between bg-[#6B3CC9] px-5 py-[26px] sm:px-10 md:px-[60px] xl:px-20">
       <img src={Logo} alt="AT Digital Logo" className="h-[25px]" />
 
       <div className=" hidden gap-7 sm:flex">

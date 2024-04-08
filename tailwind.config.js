@@ -4,7 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // inter: ['Inter', 'sans-serif'],
+        backgroundImage: {
+          'hero-pattern':
+            'linear-gradient(256.73deg, #1CBDDD 27.86%, #4DCA79 100%), #FFFFFF',
+          'footer-texture': "url('/img/footer-texture.png')",
+        },
       },
     },
   },
