@@ -3,7 +3,7 @@ import TopNavigation from '../components/TopNavigation';
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="w-full">
       <TopNavigation />
       <Footer />
     </div>
