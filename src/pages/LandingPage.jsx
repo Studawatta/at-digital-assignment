@@ -5,8 +5,10 @@ import Button from '../components/Button';
 import image2 from '../assets/image2.png';
 import image1 from '../assets/image1.png';
 import Faqs from '../components/Faqs';
+import { useState } from 'react';
 
 const LandingPage = () => {
+  const [showFAQAnswer, setShowFAQAnswer] = useState('first');
   return (
     <div className="relative w-full">
       <TopNavigation />
@@ -88,20 +90,29 @@ const LandingPage = () => {
           {/* QUESTIONS */}
           <div className="flex w-full flex-col items-start gap-3 rounded-[7px] bg-[#FAF8FF] p-6 xl:w-[846px]">
             <Faqs
+              id="first"
               question="Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?"
               answer="Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer."
+              setShowFAQAnswer={setShowFAQAnswer}
+              showFAQAnswer={showFAQAnswer}
             />
           </div>
           <div className="flex w-full flex-col items-start gap-3 rounded-[7px] bg-[#FAF8FF] p-6 xl:w-[846px]">
             <Faqs
+              id="second"
               question="Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?"
               answer="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+              setShowFAQAnswer={setShowFAQAnswer}
+              showFAQAnswer={showFAQAnswer}
             />
           </div>
           <div className="flex w-full flex-col items-start gap-3 rounded-[7px] bg-[#FAF8FF] p-6 xl:w-[846px]">
             <Faqs
+              id="third"
               question="Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?"
               answer="Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices. Cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere."
+              setShowFAQAnswer={setShowFAQAnswer}
+              showFAQAnswer={showFAQAnswer}
             />
           </div>
         </div>

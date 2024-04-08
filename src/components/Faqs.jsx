@@ -1,13 +1,11 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
 import plusIcon from '../assets/plusIcon.png';
 import minusIcon from '../assets/minusIcon.png';
 
-// eslint-disable-next-line react/prop-types
-const Faqs = ({ question, answer }) => {
-  const [showAnswer, setShowAnswer] = useState(false);
+const Faqs = ({ question, answer, showFAQAnswer, setShowFAQAnswer, id }) => {
   return (
     <div className="w-full">
-      {showAnswer ? (
+      {showFAQAnswer === id ? (
         <div className="flex flex-col items-start gap-3">
           <div className="flex w-full flex-row items-start justify-between gap-10 p-0 ">
             <p className="w-[232px] font-['Inter'] text-[22px] font-medium leading-7 text-[#6B3CC9] md:w-fit">
@@ -15,7 +13,7 @@ const Faqs = ({ question, answer }) => {
             </p>
             <div
               className="flex h-[24px] w-[14px] cursor-pointer flex-col pt-2"
-              onClick={() => setShowAnswer(false)}
+              onClick={() => setShowFAQAnswer(null)}
             >
               <img
                 src={minusIcon}
@@ -36,7 +34,7 @@ const Faqs = ({ question, answer }) => {
             </p>
             <div
               className="flex h-[24px] w-[14px] cursor-pointer flex-col pt-2"
-              onClick={() => setShowAnswer(true)}
+              onClick={() => setShowFAQAnswer(id)}
             >
               <img
                 src={plusIcon}

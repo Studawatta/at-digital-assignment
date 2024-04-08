@@ -5,16 +5,16 @@ import CloseIcon from '../assets/CloseIcon.png';
 const TopNavigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navButtonStyle =
-    "text-white font-['Inter'] uppercase font-medium text-[14px] leading-[17px] cursor-pointer";
+    " font-['Inter'] uppercase font-medium text-[14px] leading-[17px] cursor-pointer";
   return (
     <div className="absolute left-0 top-0 flex h-[77px] w-full items-center justify-between bg-[#6B3CC9] px-5 py-[26px] sm:px-10 md:px-[60px] xl:px-20">
-      <img src={Logo} alt="AT Digital Logo" className="h-[25px]" />
+      <img src={Logo} alt="AT Digital Logo" className="h-[25px] w-[238px]" />
 
       <div className=" hidden gap-7 sm:flex">
-        <span className={navButtonStyle}>services</span>
-        <span className={navButtonStyle}>about us</span>
-        <span className={navButtonStyle}>contact us</span>
-        <span className={navButtonStyle}>careers</span>
+        <span className={`${navButtonStyle} text-white`}>services</span>
+        <span className={`${navButtonStyle} text-white`}>about us</span>
+        <span className={`${navButtonStyle} text-white`}>contact us</span>
+        <span className={`${navButtonStyle} text-white`}>careers</span>
       </div>
 
       {/* MOBILE VIEW */}
@@ -27,7 +27,7 @@ const TopNavigation = () => {
         />
       </div>
       {showMenu && (
-        <div className=" fixed left-0 top-0 h-screen  w-full bg-white px-5 py-4">
+        <div className=" fixed left-0 top-0 z-20 h-screen w-full bg-white px-5 py-4">
           <div className="flex justify-between">
             <div className="flex flex-col gap-9">
               <span className={`${navButtonStyle} text-black`}>services</span>
